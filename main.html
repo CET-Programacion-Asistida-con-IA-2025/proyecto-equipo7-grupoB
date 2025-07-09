@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desigualdad Laboral Juvenil</title>
+
+    <!-- ✅ ENLACES CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FIN ENLACES CSS -->
 </head>
 <body>
-
     <header>
         <h1>Desigualdad Laboral Juvenil</h1>
         <nav>
@@ -19,14 +22,15 @@
                 <li><a href="#calculadora">Calculadora</a></li>
                 <li><a href="#faqs">FAQs</a></li>
                 <li><a href="#newsletter">Newsletter</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#galeria">Comunidad</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="intro" class="hero">
-        <h2>Rompiendo barreras laborales 🚀</h2>
-        <p>Plataforma de apoyo para jóvenes en la búsqueda de empleo en Argentina 🇦🇷</p>
+        <h2>✨ Bienvenid@s a nuestra plataforma contra la desigualdad laboral juvenil 🚀</h2>
+        <p>Un sitio para ayudar a jóvenes a conseguir oportunidades laborales reales en Argentina 🇦🇷</p>
+        <img src="https://www.unicef.org/argentina/sites/unicef.org.argentina/files/styles/media_mobile/public/Trabajo-juvenil.jpg" alt="Joven trabajando" width="300">
     </section>
 
     <section id="estadisticas" class="card">
@@ -166,16 +170,39 @@
     </section>
 
     <section id="galeria" class="card">
-    <h2>📸 Comunidad Activa</h2>
-    <img src="https://www.flexjobs.com/blog/wp-content/uploads/2020/02/16064920/The-Pros-and-Cons-of-Coworking-Spaces.png" alt="Espacio coworking" width="300">
-    <img src="https://www.robertwalters.mx/tendencias-de-talento/consejos-de-carrera/blog/como-realizar-entrevista-de-trabajo-exitosa/_jcr_content/root/responsivegrid/article-detail/image.coreimg.85.1024.jpeg/1695935940570/cadres-932x530--2-.jpeg" alt="Entrevista laboral" width="300">
-    <img src="https://difusionconcausa.com/wp-content/uploads/2023/05/5-estrategias-clave-para-mejorar-el-trabajo-en-equipo-en-tu-OSC-y-alcanzar-el-exito.jpg" alt="Trabajo en equipo" width="300">
-</section>
+        <h2>📸 Comunidad Activa</h2>
+        <!-- ✅ CARROUSEL BOOTSTRAP-->
+        <div id="carouselEjemplo" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://img.freepik.com/foto-gratis/jovenes-trabajando-equipo-tecnologia_23-2149309594.jpg" class="d-block w-100" alt="Trabajo en equipo">
+            </div>
+            <div class="carousel-item">\              <img src="https://blog.waikareinnovacion.com/hubfs/Imported_Blog_Media/C%C3%B3mo-prepararte-para-tu-entrevista-laboral-1-1.jpg" class="d-block w-100" alt="Entrevista laboral">
+            </div>
+            <div class="carousel-item">
+              <img src="https://www.adeccogroup.com/wp-content/uploads/2020/12/Young-Workers.jpg" class="d-block w-100" alt="Jóvenes empleándose">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+        <!-- ✅ FIN CARROUSEL -->
+    </section>
 
     <footer>
         <p>© 2025 Plataforma de Empleo Juvenil - Proyecto educativo.</p>
+        <p>Síguenos en <a href="https://www.instagram.com" target="_blank">Instagram</a>, <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> y <a href="https://twitter.com" target="_blank">Twitter</a></p>
     </footer>
 
+    <!-- ✅ ENLACES JAVASCRIPT -->
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FIN ENLACES JAVASCRIPT -->
 </body>
 </html>
