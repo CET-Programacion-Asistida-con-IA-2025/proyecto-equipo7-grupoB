@@ -6,12 +6,6 @@ _Curso de Programación Asistida con IA - Chicas en Tecnología_ 🚀
 ### 📄 Entregas
 **Entrega #1**: planificación de la solución y primeros resultados que obtengamos con la IA:
 
-📝 Edición del Archivo README incluyendo:
-- Definición de la problemática que eligieron abordar
-- Relación con los *Objetivos de Desarrollo Sostenible (ODS)*[^1]
-- Explicación de la solución tecnológica que están desarrollando
-> [!TIP]
-> Aprovechen los [formatos del README](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) para escribir diferentes secciones
 
 🎨 Moodboard
 
