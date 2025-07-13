@@ -1,67 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plataforma de Empleo Juvenil</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cooper+Hewitt&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Plataforma de Empleo Juvenil</title>
+
+    <!-- ✅ ENLACES CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cooper+Hewitt&display=swap" rel="stylesheet">
+    <!-- FIN ENLACES CSS -->
 </head>
 <body>
-  <nav>
-    <!-- Tu barra de navegación aquí -->
-  </nav>
+    <header>
+        <h1>Desigualdad Laboral Juvenil</h1>
+        <nav>
+            <ul>
+                <li><a href="#estadisticas">Estadísticas</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#red-apoyo">Red de Apoyo</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#galeria">Comunidad</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="funcionalidades" class="card">
-    <!-- Sección de funcionalidades clave -->
-  </section>
+    <section id="intro" class="hero">
+        <h2>✨ Bienvenid@s a nuestra plataforma contra la desigualdad laboral juvenil 🚀</h2>
+        <p>Un sitio para ayudar a jóvenes a conseguir oportunidades laborales reales en Argentina 🇦🇷</p>
+        <img src="https://www.unicef.org/argentina/sites/unicef.org.argentina/files/styles/media_mobile/public/Trabajo-juvenil.jpg" alt="Joven trabajando" width="300">
+    </section>
 
-  <section id="testimonios" class="card">
-    <!-- Sección de testimonios -->
-  </section>
+    <section id="estadisticas" class="card">
+        <h2>📊 Estadísticas Reales</h2>
+        <p>Datos actualizados sobre desempleo juvenil en Argentina: 22% de jóvenes entre 18 y 29 años buscan trabajo activamente (2024).</p>
+        <button onclick="mostrarAlerta()">Ver últimas actualizaciones 🔄</button>
+    </section>
 
-  <section id="recursos" class="card">
-    <!-- Recursos laborales -->
-  </section>
+    <section id="testimonios" class="card">
+        <h2>🗣 Testimonios</h2>
+        <div class="testimonios-grid">
+            <div class="testimonio-card">
+                <div class="quote">Nunca pensé que un buen CV me abriría tantas puertas. Después de seguir los consejos de esta plataforma, conseguí tres entrevistas en una semana.</div>
+                <div class="author">- María, 23 años 👩‍💼</div>
+            </div>
+            <div class="testimonio-card">
+                <div class="quote">Gracias a un mentor logré mi primer trabajo formal. El apoyo y la guía fueron fundamentales para mi desarrollo profesional.</div>
+                <div class="author">- Juan, 25 años 👨‍💻</div>
+            </div>
+            <div class="testimonio-card">
+                <div class="quote">La calculadora de empleabilidad me ayudó a identificar mis puntos débiles y enfocarme en mejorar mis habilidades digitales.</div>
+                <div class="author">- Sofia, 22 años 🎯</div>
+            </div>
+            <div class="testimonio-card">
+                <div class="quote">Los recursos y tips para entrevistas me dieron la confianza que necesitaba. Ahora trabajo en una startup tecnológica.</div>
+                <div class="author">- Diego, 26 años 🚀</div>
+            </div>
+        </div>
+    </section>
 
-  <section id="calculadora" class="card">
-    <!-- Calculadora de empleabilidad -->
-  </section>
+    <section id="recursos" class="card">
+        <h2>🛠 Recursos Prácticos</h2>
+        <ul>
+            <li>Guía para hacer un CV profesional</li>
+            <li>Tips para entrevistas laborales</li>
+            <li>Habilidades más demandadas en 2025</li>
+        </ul>
+        <input type="text" id="buscador" placeholder="Buscar recursos 🔎">
+        <button onclick="buscarRecursos()">Buscar</button>
+        <div id="resultadosBusqueda"></div>
+    </section>
 
-  <section id="cursos" class="card">
-    <!-- Cursos gratuitos -->
-  </section>
+    <section id="red-apoyo" class="card">
+        <h2>🤝 Red de Apoyo</h2>
+        <p>Conecta con mentores y programas de inserción laboral.</p>
+        <form id="formularioApoyo">
+            <input type="text" placeholder="Tu nombre">
+            <input type="email" placeholder="Tu email">
+            <textarea placeholder="¿En qué podemos ayudarte?"></textarea>
+            <button type="submit">Enviar solicitud 📩</button>
+        </form>
+    </section>
 
-  <section id="vocacional" class="card">
-    <!-- Test vocacional -->
-  </section>
+    <section id="calculadora" class="card">
+        <h2>📈 Calculadora de empleabilidad</h2>
+        <p>Evalúa rápidamente tu preparación actual.</p>
+        <label>¿Tienes experiencia laboral? 
+            <select id="experiencia">
+                <option value="1">Sí</option>
+                <option value="0">No</option>
+            </select>
+        </label><br>
+        <label>¿Dominas herramientas digitales?
+            <select id="digital">
+                <option value="1">Sí</option>
+                <option value="0">No</option>
+            </select>
+        </label><br>
+        <label>¿Nivel de estudios?
+            <select id="estudios">
+                <option value="2">Universitario</option>
+                <option value="1">Secundario</option>
+                <option value="0">Primario o ninguno</option>
+            </select>
+        </label><br>
+        <button onclick="calcular()">Calcular 💡</button>
+        <div id="resultadoCalculo"></div>
+    </section>
 
-  <section id="red-apoyo" class="card">
-    <!-- Red de apoyo y contacto -->
-  </section>
+    <section id="faqs" class="card">
+        <h2>❓ Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Cómo puedo mejorar mi CV si no tengo experiencia laboral?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Enfócate en tus estudios, proyectos académicos, voluntariados, cursos online y habilidades técnicas. También puedes incluir trabajos de medio tiempo, prácticas no remuneradas o proyectos personales que demuestren tus capacidades.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Qué habilidades digitales son más valoradas en 2025?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Las más demandadas incluyen: manejo de redes sociales, análisis de datos básico, herramientas de Microsoft Office/Google Workspace, programación básica, marketing digital, y competencias en inteligencia artificial y automatización.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Cómo me conecto con un mentor a través de esta plataforma?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Completa el formulario en la sección "Red de Apoyo" con información detallada sobre tu perfil y objetivos. Nuestro equipo te conectará con un mentor adecuado según tu área de interés y experiencia en un plazo de 48-72 horas.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Es gratuito el uso de esta plataforma?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Sí, todos nuestros recursos básicos son completamente gratuitos. Esto incluye la calculadora de empleabilidad, recursos descargables, conexión con mentores básica y acceso a la comunidad. Es nuestro compromiso social con los jóvenes argentinos.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Qué debo hacer si no encuentro trabajo después de 6 meses buscando?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                No te desanimes. Considera actualizar tu estrategia: revisa tu CV, practica entrevistas, amplía tu red de contactos, considera trabajos temporales para ganar experiencia, y evalúa si necesitas desarrollar nuevas habilidades específicas del mercado actual.
+            </div>
+        </div>
+    </section>
 
-  <section id="frases-apoyo" class="quotes-section">
-    <!-- Frases motivadoras -->
-  </section>
+    <section id="newsletter" class="card newsletter">
+        <h2>📧 Newsletter Semanal</h2>
+        <p>Recibe las últimas oportunidades laborales, tips de empleabilidad y noticias del mercado laboral juvenil directamente en tu email.</p>
+        <div style="margin-top: 20px;">
+            <input type="email" id="emailNewsletter" placeholder="tu@email.com">
+            <button onclick="suscribirNewsletter()">Suscribirme 📩</button>
+        </div>
+        <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.9;">🔒 Tu privacidad es importante. No compartimos tu información con terceros.</p>
+    </section>
 
-  <section id="faq" class="card">
-    <!-- Preguntas frecuentes -->
-  </section>
+    <section id="galeria" class="card">
+        <h2>📸 Comunidad Activa</h2>
+        <!-- ✅ CARROUSEL BOOTSTRAP-->
+        <div id="carouselEjemplo" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://img.freepik.com/foto-gratis/jovenes-trabajando-equipo-tecnologia_23-2149309594.jpg" class="d-block w-100" alt="Trabajo en equipo">
+            </div>
+            <div class="carousel-item">
+              <img src="https://blog.waikareinnovacion.com/hubfs/Imported_Blog_Media/C%C3%B3mo-prepararte-para-tu-entrevista-laboral-1-1.jpg" class="d-block w-100" alt="Entrevista laboral">
+            </div>
+            <div class="carousel-item">
+              <img src="https://www.adeccogroup.com/wp-content/uploads/2020/12/Young-Workers.jpg" class="d-block w-100" alt="Jóvenes empleándose">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+        <!-- ✅ FIN CARROUSEL -->
+    </section>
 
-  <footer>
-    <h3>🌟 Plataforma de Empleo Juvenil Argentina</h3>
-    <p>© 2025 - Proyecto educativo creado con ❤️ para jóvenes argentinos 🇦🇷</p>
-    <p>Construyendo puentes hacia un futuro laboral digno e inclusivo</p>
-    <div id="redes-footer" class="social-links">
-      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦 Twitter</a>
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
-    </div>
-  </footer>
+	<footer>
+		<h3>🌟 Plataforma de Empleo Juvenil Argentina</h3>
+		<p>© 2025 - Proyecto educativo creado con ❤️ para jóvenes argentinos 🇦🇷</p>
+		<p>Construyendo puentes hacia un futuro laboral digno e inclusivo</p>
+		<div id="redes-footer" class="social-links">
+		  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+		  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦 Twitter</a>
+		  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+		  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+		</div>
+	</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="funciones.js"></script>
+
+    <!-- ✅ ENLACES JAVASCRIPT -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FIN ENLACES JAVASCRIPT -->
 </body>
 </html>
